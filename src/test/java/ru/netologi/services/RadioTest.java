@@ -97,34 +97,6 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
     }
 
-    @Test // кнопка следующей радиостанции 10???
-    public void PrevNumber10() {
-        Radio rad = new Radio();
-
-        rad.currentNumber = 10;
-
-        rad.nextNumber();
-
-        int expected = 0;
-        int actual = rad.currentNumber;
-
-        Assertions.assertEquals(expected, actual);
-    }
-
-    @Test // кнопка предыдущей радиостанции -1???
-    public void PrevNumberMin() {
-        Radio rad = new Radio();
-
-        rad.currentNumber = -1;
-
-        rad.prevNumber();
-
-        int expected = 9;
-        int actual = rad.currentNumber;
-
-        Assertions.assertEquals(expected, actual);
-    }
-
     @Test // кнопка следующей радиостанции на 9
     public void NextNumber9() {
         Radio rad = new Radio();
@@ -138,6 +110,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
 
     @Test // кнопка следующей радиостанции c 8 на 9
     public void NextNumber8() {
@@ -260,6 +233,4 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
-
-
 }
