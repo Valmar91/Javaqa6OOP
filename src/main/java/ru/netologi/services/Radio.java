@@ -1,12 +1,15 @@
 package ru.netologi.services;
 
 public class Radio {
-    public int currentVolume;
-    public int currentNumber;
+    private int currentVolume;
+    private int currentNumber;
 
     public int getCurrentNumber() {
-
         return currentNumber;
+    }
+
+    public int getCurrentVolume() {
+        return currentVolume;
     }
 
     public void setCurrentNumber(int newCurrentNumber) {
@@ -17,6 +20,10 @@ public class Radio {
             return;
         }
         currentNumber = newCurrentNumber;
+    }
+
+    public void setCurrentVolume(int newCurrentVolume) {
+        currentVolume = newCurrentVolume;
     }
 
     public void decreaseVolume() {

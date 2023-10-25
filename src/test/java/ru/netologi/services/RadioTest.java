@@ -45,12 +45,12 @@ public class RadioTest {
     public void increaseVolume() {
         Radio rad = new Radio();
 
-        rad.currentVolume = 15;
+        rad.setCurrentVolume(15);
 
         rad.increaseVolume();
 
         int expected = 16;
-        int actual = rad.currentVolume;
+        int actual = rad.getCurrentVolume();
 
         Assertions.assertEquals(expected, actual);
     }
@@ -59,12 +59,12 @@ public class RadioTest {
     public void decreaseVolume() {
         Radio rad = new Radio();
 
-        rad.currentVolume = 15;
+        rad.setCurrentVolume(15);
 
         rad.decreaseVolume();
 
         int expected = 14;
-        int actual = rad.currentVolume;
+        int actual = rad.getCurrentVolume();
 
         Assertions.assertEquals(expected, actual);
     }
@@ -73,12 +73,12 @@ public class RadioTest {
     public void NextNumber() {
         Radio rad = new Radio();
 
-        rad.currentNumber = 5;
+        rad.setCurrentNumber(5);
 
         rad.nextNumber();
 
         int expected = 6;
-        int actual = rad.currentNumber;
+        int actual = rad.getCurrentNumber();
 
         Assertions.assertEquals(expected, actual);
     }
@@ -87,12 +87,12 @@ public class RadioTest {
     public void PrevNumber() {
         Radio rad = new Radio();
 
-        rad.currentNumber = 5;
+        rad.setCurrentNumber(5);
 
         rad.prevNumber();
 
         int expected = 4;
-        int actual = rad.currentNumber;
+        int actual = rad.getCurrentNumber();
 
         Assertions.assertEquals(expected, actual);
     }
@@ -101,12 +101,12 @@ public class RadioTest {
     public void NextNumber9() {
         Radio rad = new Radio();
 
-        rad.currentNumber = 9;
+        rad.setCurrentNumber(9);
 
         rad.nextNumber();
 
         int expected = 0;
-        int actual = rad.currentNumber;
+        int actual = rad.getCurrentNumber();
 
         Assertions.assertEquals(expected, actual);
     }
@@ -116,12 +116,12 @@ public class RadioTest {
     public void NextNumber8() {
         Radio rad = new Radio();
 
-        rad.currentNumber = 8;
+        rad.setCurrentNumber(8);
 
         rad.nextNumber();
 
         int expected = 9;
-        int actual = rad.currentNumber;
+        int actual = rad.getCurrentNumber();
 
         Assertions.assertEquals(expected, actual);
     }
@@ -130,12 +130,12 @@ public class RadioTest {
     public void PrevNumber0() {
         Radio rad = new Radio();
 
-        rad.currentNumber = 0;
+        rad.setCurrentNumber(0);
 
         rad.prevNumber();
 
         int expected = 9;
-        int actual = rad.currentNumber;
+        int actual = rad.getCurrentNumber();
 
         Assertions.assertEquals(expected, actual);
     }
@@ -144,12 +144,12 @@ public class RadioTest {
     public void PrevNumber1() {
         Radio rad = new Radio();
 
-        rad.currentNumber = 1;
+        rad.setCurrentNumber(1);
 
         rad.prevNumber();
 
         int expected = 0;
-        int actual = rad.currentNumber;
+        int actual = rad.getCurrentNumber();
 
         Assertions.assertEquals(expected, actual);
     }
@@ -158,12 +158,12 @@ public class RadioTest {
     public void increaseVolume100() {
         Radio rad = new Radio();
 
-        rad.currentVolume = 100;
+        rad.setCurrentVolume(100);
 
         rad.increaseVolume();
 
         int expected = 100;
-        int actual = rad.currentVolume;
+        int actual = rad.getCurrentVolume();
 
         Assertions.assertEquals(expected, actual);
     }
@@ -172,12 +172,12 @@ public class RadioTest {
     public void decreaseVolume0() {
         Radio rad = new Radio();
 
-        rad.currentVolume = 0;
+        rad.setCurrentVolume(0);
 
         rad.decreaseVolume();
 
         int expected = 0;
-        int actual = rad.currentVolume;
+        int actual = rad.getCurrentVolume();
 
         Assertions.assertEquals(expected, actual);
     }
@@ -186,12 +186,12 @@ public class RadioTest {
     public void increaseVolume99() {
         Radio rad = new Radio();
 
-        rad.currentVolume = 99;
+        rad.setCurrentVolume(99);
 
         rad.increaseVolume();
 
         int expected = 100;
-        int actual = rad.currentVolume;
+        int actual = rad.getCurrentVolume();
 
         Assertions.assertEquals(expected, actual);
     }
@@ -200,12 +200,12 @@ public class RadioTest {
     public void decreaseVolume1() {
         Radio rad = new Radio();
 
-        rad.currentVolume = 1;
+        rad.setCurrentVolume(1);
 
         rad.decreaseVolume();
 
         int expected = 0;
-        int actual = rad.currentVolume;
+        int actual = rad.getCurrentVolume();
 
         Assertions.assertEquals(expected, actual);
     }
