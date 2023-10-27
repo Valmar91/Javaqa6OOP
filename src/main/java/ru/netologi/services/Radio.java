@@ -5,6 +5,7 @@ public class Radio {
     private int currentNumber;
 
     public int getCurrentNumber() {
+
         return currentNumber;
     }
 
@@ -12,8 +13,18 @@ public class Radio {
         return currentVolume;
     }
 
+    private int Numbers; // количество радиостанций
+
+    public Radio(int size) {
+        Numbers = size;
+    }
+
+    public Radio() {
+        Numbers = 10;
+    }
+
     public void setCurrentNumber(int newCurrentNumber) {
-        if (newCurrentNumber > 9) {
+        if (newCurrentNumber > Numbers - 1) {
             return;
         }
         if (newCurrentNumber < 0) {
@@ -39,7 +50,7 @@ public class Radio {
     }
 
     public void nextNumber() {
-        if (currentNumber < 9) {
+        if (currentNumber < Numbers - 1) {
             currentNumber++;
             return;
         }
@@ -51,6 +62,6 @@ public class Radio {
             currentNumber--;
             return;
         }
-        currentNumber = 9;
+        currentNumber = Numbers - 1;
     }
 }
