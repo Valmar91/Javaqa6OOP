@@ -3,17 +3,28 @@ package ru.netologi.services;
 public class Radio {
     private int currentVolume;
     private int currentNumber;
+    private int numbers; // количество радиостанций
+
+    public Radio(int size) {
+        numbers = size;
+    }
+
+    public Radio() {
+        numbers = 10;
+    }
 
     public int getCurrentNumber() {
+
         return currentNumber;
     }
 
     public int getCurrentVolume() {
+
         return currentVolume;
     }
 
     public void setCurrentNumber(int newCurrentNumber) {
-        if (newCurrentNumber > 9) {
+        if (newCurrentNumber > numbers - 1) {
             return;
         }
         if (newCurrentNumber < 0) {
@@ -39,7 +50,7 @@ public class Radio {
     }
 
     public void nextNumber() {
-        if (currentNumber < 9) {
+        if (currentNumber < numbers - 1) {
             currentNumber++;
             return;
         }
@@ -51,6 +62,6 @@ public class Radio {
             currentNumber--;
             return;
         }
-        currentNumber = 9;
+        currentNumber = numbers - 1;
     }
 }
